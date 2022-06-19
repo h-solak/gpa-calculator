@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spa-calculator/static/css/main.c7e2f934.css",
+    "main.js": "/spa-calculator/static/js/main.a61dfe64.js",
+    "index.html": "/spa-calculator/index.html",
+    "main.c7e2f934.css.map": "/spa-calculator/static/css/main.c7e2f934.css.map",
+    "main.a61dfe64.js.map": "/spa-calculator/static/js/main.a61dfe64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7e2f934.css",
+    "static/js/main.a61dfe64.js"
+  ]
+}
