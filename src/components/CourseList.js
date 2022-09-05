@@ -22,34 +22,23 @@ const CouresList = ({ allCourses, handleDelete }) => {
     setGpa(newGpa);
   };
 
-  useEffect(() => {
-    //hide gpa when user adds a new course or deletes a course
-    setGpa(-1);
-  }, [allCourses]);
+ 
 
   return (
-    <div className="courses">
-      <div className="courses-table mt-3">
+    <>
         {allCourses.map((course) => (
-          <Course
-            key={course.id}
-            id={course.id}
-            name={course.name}
-            credit={course.credit}
-            letterGrade={course.letterGrade}
-            handleDelete={handleDelete}
-          />
+          <tr key={course.id}>
+            <Course
+              id={course.id}
+              name={course.name}
+              credit={course.credit}
+              letterGrade={course.letterGrade}
+              handleDelete={handleDelete}
+            />
+          </tr>
         ))}
-      </div>
-      <button className="mt-3 btn btn-dark" onClick={calculate}>
-        Calculate
-      </button>
-      {gpa >= 0 ? (
-        <span className="fs-1" title={gpa.toFixed(4)}>
-          {gpa.toFixed(2)}
-        </span>
-      ) : null}
-    </div>
+      
+    </>
   );
 };
 

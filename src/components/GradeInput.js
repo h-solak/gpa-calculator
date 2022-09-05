@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import { Button, Input } from 'reactstrap';
 
 const GradeInput = ({ allCourses, setAllCourses }) => {
   const [courseName, setCourseName] = useState("");
@@ -47,6 +48,7 @@ const GradeInput = ({ allCourses, setAllCourses }) => {
   };
 
   const addCourse = () => {
+    console.log(courseName)
     let newCourse = {
       id: nanoid(),
       name: courseName,
@@ -62,19 +64,20 @@ const GradeInput = ({ allCourses, setAllCourses }) => {
   };
 
   return (
-    <div className="add-course d-flex align-items-center justify-content-between">
-      <div>
-        <input
+    <>
+     <thead>
+      <th>
+        <Input
           type="text"
           aria-label="Course Name"
-          className="form-control p-2"
+          className="form-control"
           placeholder="Ders adı..."
           onChange={handleCourseNameChange}
           value={courseName}
         />
-      </div>
-      <div>
-        <select id="credit" className="form-control">
+      </th>
+      <th>
+        <Input type="select" id="credit" className="form-control text-center">
           <option value={0.5}>0.5</option>
           <option value={1}>1</option>
           <option value={1.5}>1.5</option>
@@ -87,10 +90,10 @@ const GradeInput = ({ allCourses, setAllCourses }) => {
           <option value={4}>4</option>
           <option value={4.5}>4.5</option>
           <option value={5}>5</option>
-        </select>
-      </div>
-      <div>
-        <select id="grade" className="form-control">
+        </Input>
+      </th>
+      <th>
+        <Input type="select" id="grade" className="form-control text-center">
           <option value={"AA"}>AA</option>
           <option value={"BA"}>BA</option>
           <option value={"BB"}>BB</option>
@@ -100,15 +103,16 @@ const GradeInput = ({ allCourses, setAllCourses }) => {
           <option value={"DD"}>DD</option>
           <option value={"FD"}>FD</option>
           <option value={"FF"}>FF</option>
-        </select>
-      </div>
+        </Input>
+      </th>
 
-      <div>
-        <button className="btn btn-dark" onClick={addCourse}>
+      <th className="">
+        <Button className="btn btn-dark w-100" onClick={addCourse} style={{background: "#212529"}}>
           Ekle
-        </button>
-      </div>
-    </div>
+        </Button>
+      </th>
+      </thead>
+    </>
   );
 };
 
