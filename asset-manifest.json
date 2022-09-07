@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/spa-calculator/static/css/main.c7e2f934.css",
-    "main.js": "/spa-calculator/static/js/main.a61dfe64.js",
+    "main.css": "/spa-calculator/static/css/main.207a761a.css",
+    "main.js": "/spa-calculator/static/js/main.edf54d36.js",
     "index.html": "/spa-calculator/index.html",
-    "main.c7e2f934.css.map": "/spa-calculator/static/css/main.c7e2f934.css.map",
-    "main.a61dfe64.js.map": "/spa-calculator/static/js/main.a61dfe64.js.map"
+    "main.207a761a.css.map": "/spa-calculator/static/css/main.207a761a.css.map",
+    "main.edf54d36.js.map": "/spa-calculator/static/js/main.edf54d36.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7e2f934.css",
-    "static/js/main.a61dfe64.js"
+    "static/css/main.207a761a.css",
+    "static/js/main.edf54d36.js"
   ]
 }
