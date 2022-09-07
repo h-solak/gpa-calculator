@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/spa-calculator/static/css/main.207a761a.css",
-    "main.js": "/spa-calculator/static/js/main.edf54d36.js",
-    "index.html": "/spa-calculator/index.html",
-    "main.207a761a.css.map": "/spa-calculator/static/css/main.207a761a.css.map",
-    "main.edf54d36.js.map": "/spa-calculator/static/js/main.edf54d36.js.map"
+    "main.css": "/gpa-calculator/static/css/main.207a761a.css",
+    "main.js": "/gpa-calculator/static/js/main.edf54d36.js",
+    "index.html": "/gpa-calculator/index.html",
+    "main.207a761a.css.map": "/gpa-calculator/static/css/main.207a761a.css.map",
+    "main.edf54d36.js.map": "/gpa-calculator/static/js/main.edf54d36.js.map"
   },
   "entrypoints": [
     "static/css/main.207a761a.css",
