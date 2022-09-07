@@ -1,3 +1,2 @@
-**SPA Calculator**  
-UI update is coming soon  
+**GPA Calculator**  
 Live: https://h-solak.github.io/gpa-calculator
