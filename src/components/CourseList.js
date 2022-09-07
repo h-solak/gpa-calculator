@@ -22,22 +22,19 @@ const CouresList = ({ allCourses, handleDelete }) => {
     setGpa(newGpa);
   };
 
- 
-
   return (
     <>
-        {allCourses.map((course) => (
-          <tr key={course.id}>
-            <Course
-              id={course.id}
-              name={course.name}
-              credit={course.credit}
-              letterGrade={course.letterGrade}
-              handleDelete={handleDelete}
-            />
-          </tr>
-        ))}
-      
+      {allCourses.map((course) => (
+        <tr key={course.id}>
+          <Course
+            id={course.id}
+            name={course.name}
+            credit={course.credit}
+            letterGrade={course.letterGrade}
+            handleDelete={handleDelete}
+          />
+        </tr>
+      ))}
     </>
   );
 };
