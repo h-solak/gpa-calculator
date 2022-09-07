@@ -51,7 +51,7 @@ const Calculator = () => {
   };
 
   return (
-    <Row className="d-flex justify-content-center p-0 m-0">
+    <Row className="d-flex justify-content-center p-0 m-0 fade-in">
       <Col sm="12" md="6" className="mb-5">
         <p className="text-center fs-4 m-0 mb-5" style={{ fontWeight: "600" }}>
           GPA Hesaplayıcı

@@ -9,7 +9,7 @@ const Header = () => {
     >
       <Col sm="12">
         <header
-          className="d-flex align-items-center justify-content-center justify-content-sm-end px-4"
+          className="d-flex align-items-center justify-content-center justify-content-sm-end px-4 fade-in"
           title="Github hesabıma göz atın..."
         >
           <a
