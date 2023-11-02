@@ -1,48 +1,39 @@
 {
-    "homepage": "https://h-solak.github.io/spa-calculator",
-    "name": "spa-calculator",
-    "version": "0.1.0",
+    "name": "gpa-calculator",
     "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.16.4",
-        "@testing-library/react": "^13.3.0",
-        "@testing-library/user-event": "^13.5.0",
-        "bootstrap": "^5.2.0",
-        "gh-pages": "^4.0.0",
-        "nanoid": "^4.0.0",
-        "node-sass": "^7.0.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-hot-toast": "^2.3.0",
-        "react-icons": "^4.4.0",
-        "react-scripts": "5.0.1",
-        "reactstrap": "^9.1.4",
-        "web-vitals": "^2.1.4"
-    },
+    "version": "0.0.0",
+    "type": "module",
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-        "eject": "react-scripts eject"
+      "dev": "vite",
+      "build": "vite build",
+      "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+    "dependencies": {
+      "@emotion/react": "^11.11.1",
+      "@emotion/styled": "^11.11.0",
+      "@mui/icons-material": "^5.14.11",
+      "@mui/material": "^5.14.11",
+      "i18next": "^23.6.0",
+      "localforage": "^1.10.0",
+      "match-sorter": "^6.3.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-hot-toast": "^2.4.1",
+      "react-i18next": "^13.3.1",
+      "react-router-dom": "^6.16.0",
+      "sort-by": "^1.2.0"
     },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+    "devDependencies": {
+      "@types/react": "^18.2.15",
+      "@types/react-dom": "^18.2.7",
+      "@vitejs/plugin-react": "^4.0.3",
+      "eslint": "^8.45.0",
+      "eslint-plugin-react": "^7.32.2",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "eslint-plugin-react-refresh": "^0.4.3",
+      "vite": "^4.4.5"
     }
-}
+  }
