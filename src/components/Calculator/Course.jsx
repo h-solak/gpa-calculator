@@ -6,15 +6,11 @@ import {
   Select,
   TextField,
   Tooltip,
+  useMediaQuery,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 const Course = ({ id, name, credit, grade, allCourses, setAllCourses }) => {
-  //   const [course, setCourse] = useState({
-  //     id: id,
-  //     name: name,
-  //     credit: credit,
-  //     grade: grade,
-  //   });
+  const isSmScreen = useMediaQuery("(max-width:900px)");
 
   const onNameChange = (e) => {
     let newAllCourses = allCourses;
@@ -61,6 +57,7 @@ const Course = ({ id, name, credit, grade, allCourses, setAllCourses }) => {
     const newCourses = allCourses?.filter((course) => course.id !== id);
     setAllCourses(newCourses);
   };
+
   return (
     <Grid container marginTop={2} className="opening-animation">
       <Grid item xs={3.66} md={3.66} paddingRight={2}>
@@ -91,7 +88,7 @@ const Course = ({ id, name, credit, grade, allCourses, setAllCourses }) => {
           <MenuItem value={5}>5</MenuItem>
         </Select>
       </Grid>
-      <Grid item xs={3.66} md={3.66} paddingRight={2}>
+      <Grid item xs={3.66} md={3.66} paddingRight={isSmScreen ? 0 : 2}>
         <Select
           fullWidth
           size="small"

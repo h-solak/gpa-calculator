@@ -1,9 +1,12 @@
 {
     "gpaCalculator": "Gpa Hesaplayıcı",
-    "startCalculating":"Hesaplamaya Başla",
+    "startCalculatingBtn":"Hesaplamaya Başla",
+    "startCalculatingText": "Aşağıdaki butona basarak yeni bir ders ekle!",
     "courseName": "Ders Adı",
     "credit": "Kredi",
     "letterGrade": "Harf notu",
     "addNewCourse": "Yeni Ders Ekle",
+    "course": "Ders",
+    "calculate": "Hesapla",
     "reset": "Sıfırla"
 }

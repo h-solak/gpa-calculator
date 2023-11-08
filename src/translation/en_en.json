@@ -1,9 +1,12 @@
 {
     "gpaCalculator": "Gpa Calculator",
-    "startCalculating":"Start Calculating",
+    "startCalculatingBtn":"Start Calculating",
+    "startCalculatingText": "Click on the button and add a new course!",
     "courseName": "Course Name",
     "credit": "Credit",
     "letterGrade": "Letter Grade",
     "addNewCourse": "Add New Course",
+    "course": "Course",
+    "calculate": "Calculate",
     "reset": "Reset"
 }

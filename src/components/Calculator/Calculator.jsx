@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   Box,
   Button,
@@ -12,9 +12,13 @@ import Course from "./Course";
 import { randomIdGenerator } from "../../utils/randomIdGenerator";
 import GradesSvg from "../../assets/undrawgrades.svg";
 import CloseIcon from "@mui/icons-material/Close";
+import { useTranslation } from "react-i18next";
 const Calculator = () => {
+  const { t } = useTranslation();
   const [allCourses, setAllCourses] = useState([]);
   const [gpa, setGpa] = useState(-1);
+  const courseContainerRef = useRef(null);
+
   const isSmScreen = useMediaQuery("(max-width:900px)");
 
   useEffect(() => {
@@ -74,6 +78,11 @@ const Calculator = () => {
     };
     const newAllCourses = [...allCourses, newCourse];
     setAllCourses(newAllCourses);
+    //scroll to the bottom
+    setTimeout(() => {
+      courseContainerRef.current.scrollTop =
+        courseContainerRef.current.scrollHeight;
+    }, 50);
   };
   return (
     <Box>
@@ -86,16 +95,17 @@ const Calculator = () => {
           <Grid item xs={12} md={6}>
             <Grid container marginTop={2}>
               <Grid item xs={3.66} md={3.66}>
-                <Typography>Ders Adı</Typography>
+                <Typography>{t("courseName")}</Typography>
               </Grid>
               <Grid item xs={3.66} md={3.66}>
-                <Typography>Kredi</Typography>
+                <Typography>{t("credit")}</Typography>
               </Grid>
               <Grid item xs={3.66} md={3.66}>
-                <Typography>Harf Notu</Typography>
+                <Typography>{t("letterGrade")}</Typography>
               </Grid>
             </Grid>
             <Box
+              ref={courseContainerRef}
               sx={{
                 overflowY: "auto",
                 maxHeight: isSmScreen
@@ -123,7 +133,7 @@ const Calculator = () => {
                 onClick={createNewCourse}
                 sx={{ textTransform: "none", height: 36, color: "white" }}
               >
-                {isSmScreen ? "Ders" : "Yeni Ders Ekle"}
+                {t(`${isSmScreen ? "course" : "addNewCourse"}`)}
               </Button>
               <Button
                 variant="contained"
@@ -136,7 +146,7 @@ const Calculator = () => {
                   height: 36,
                 }}
               >
-                HESAPLA
+                {t("calculate")}
               </Button>
               <Button
                 variant="contained"
@@ -146,7 +156,7 @@ const Calculator = () => {
                   height: 36,
                 }}
               >
-                SIFIRLA
+                {t("reset")}
               </Button>
             </Box>
           </Grid>
@@ -261,7 +271,7 @@ const Calculator = () => {
             color={"secondary.main"}
             className="fade-in-rtl"
           >
-            Aşağıdaki butona basarak yeni bir ders ekle!
+            {t("startCalculatingText")}
           </Typography>
           <Button
             variant="contained"
@@ -271,7 +281,7 @@ const Calculator = () => {
             sx={{ marginTop: 2, textTransform: "none" }}
             className="fade-in-ltr"
           >
-            Hesaplamaya Başla
+            {t("startCalculatingBtn")}
           </Button>
         </Box>
       )}
